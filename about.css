@@ -1,0 +1,134 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: solid rgb(193, 193, 193) 1px;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+/* header styling */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em;
+}
+
+nav a {
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover { font-weight: bold }
+nav { align-self: center }
+
+.logo {
+    font-family: 'Roboto', 'sans-serif';
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+}
+.logo a {
+    text-decoration: none;
+    color: black;
+    padding-left: 5px;
+}
+
+/* info section */
+
+main {
+    background-color: whitesmoke;
+}
+
+.info img {
+    width: 200px;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+.info { padding: 1.5em }
+
+/* posts styling */
+
+.posts { padding: 1em }
+h3     { text-align: center }
+
+.post {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 40px 40px auto;
+    grid-template-areas: 
+        "photo photo"
+        "date date"
+        "title title"
+        "text text";
+    color: grey;
+}
+
+
+.post h4 { 
+    grid-area: date;
+    font-size: 13px;
+ }
+.post p  { grid-area: text }
+.post img {
+    width: 100%;
+    grid-area: photo;
+}
+.post a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    grid-area: title;
+}
+.post a:hover { text-decoration: underline }
+
+/* footer styling */
+
+footer {
+    height: 10vh;
+    background-color: black;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 0.8rem;
+}
+
+/* media queries*/
+
+@media (min-width: 600px) {
+    body {
+        margin: 1em auto 1em auto;
+        max-width: 1000px;
+    }
+
+    main { font-size: 1.2rem }
+
+    .primary-info {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info img {
+        width: 180px;
+        height: 180px;
+        margin-right: 1em;
+        align-self: center;
+    }
+
+    .content { padding: 2em }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
