@@ -76,7 +76,9 @@ h3     { text-align: center }
     grid-area: date;
     font-size: 13px;
  }
+
 .post p  { grid-area: text }
+
 .post img {
     width: 100%;
     grid-area: photo;
